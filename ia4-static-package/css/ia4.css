@@ -1,0 +1,96 @@
+:root {
+  /* Typography */
+  --font-serif: "Merriweather", Georgia, serif;
+  --font-size-base: 19px;
+  --line-height-base: 32px;
+  --font-size-mobile: 16px;
+  --line-height-mobile: 25px;
+
+  /* Colours */
+  --color-text: #222222;
+  --color-link-hover: #7E7E7E;
+
+  /* Spacing */
+  --space-lg: 64px;
+  --space-md: 32px;
+  --space-sm: 16px;
+  --space-xs: 8px;
+  --gap: 32px;
+}
+
+* {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+}
+@media (max-width: 767px) {
+  * {
+    font-size: var(--font-size-mobile);
+    line-height: var(--line-height-mobile);
+  }
+}
+
+/* Blog index excerpt spacing */
+.front .entry-content {
+  margin-bottom: var(--space-lg);
+}
+@media (max-width: 767px) {
+  .front .entry-content {
+    margin-bottom: var(--space-sm);
+  }
+}
+
+/* Hover states */
+.teaser article:hover h2 a,
+.teaser article:hover p,
+li.tile-small:hover a,
+li.tile-small:hover p,
+.tile:hover a,
+.tile:hover p {
+  color: var(--color-link-hover);
+}
+
+/* Single-post content */
+.entry-content p {
+  margin: 0 0 var(--space-md) 0;
+  hyphens: auto;
+}
+
+/* Post metadata */
+.post-data {
+  margin: 0 0 var(--space-lg) 0;
+}
+.post-data .tags .tag a {
+  font-style: italic;
+  display: inline-block;
+}
+
+/* Read-next link */
+.read-next-wrapper {
+  text-align: right;
+}
+.read-next-wrapper .read-next {
+  font-style: italic;
+}
+
+/* Portfolio grid */
+.portfolio-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--gap);
+  margin-bottom: var(--space-lg);
+}
+
+/* Portfolio tile */
+.tile img {
+  width: 100%;
+  display: block;
+}
+.tile h2 {
+  margin: var(--space-sm) 0 var(--space-xs);
+  font-size: 1.125rem;
+}
+.tile p {
+  margin: 0;
+}
