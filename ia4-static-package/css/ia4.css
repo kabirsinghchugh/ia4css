@@ -61,7 +61,7 @@ li.tile-small:hover p,
 .post-data {
   margin: 0 0 var(--space-lg) 0;
 }
-.post-data .tags .tag a {
+.post-data .tags a {
   font-style: italic;
   display: inline-block;
 }
